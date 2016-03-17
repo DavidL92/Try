@@ -1,4 +1,6 @@
 #include "concreteStateA.h"
+using namespace std;
+
 
 ConcreteStateA::ConcreteStateA()
 {
@@ -6,7 +8,7 @@ ConcreteStateA::ConcreteStateA()
 ConcreteStateA::~ConcreteStateA()
 {
 }
-static State *ConcreteStateA::Instance()
+State *ConcreteStateA::Instance()
 {
     if(m_pState == NULL)
     {

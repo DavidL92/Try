@@ -1,7 +1,5 @@
-#include "state.h"
 #include "context.h"
-class ConcreteStateA;
-class ConcreteStateB : public state
+class ConcreteStateB : public State
 {
     public:
         virtual ~ConcreteStateB();
@@ -12,4 +10,4 @@ class ConcreteStateB : public state
     private:
         ConcreteStateB();
         static State* m_pState;
-}
+};

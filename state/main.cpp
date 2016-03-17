@@ -1,7 +1,5 @@
 #include <iostream>
-#include "Context.h"
-#include "ConcreteStateA.h"
-#include "ConcreteStateB.h"
+#include "concreteStateA.h"
 
 using namespace std;
 

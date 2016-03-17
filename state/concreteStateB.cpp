@@ -1,12 +1,14 @@
 #include "concreteStateB.h"
+using namespace std;
 
-ConcreteStateA::ConcreteStateB()
+class ConcreteStateA;
+ConcreteStateB::ConcreteStateB()
 {
 }
-ConcreteStateA::~ConcreteStateB()
+ConcreteStateB::~ConcreteStateB()
 {
 }
-static State *ConcreteStateB::Instance()
+State *ConcreteStateB::Instance()
 {
     if(m_pState == NULL)
     {
