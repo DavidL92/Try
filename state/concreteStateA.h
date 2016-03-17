@@ -1,11 +1,13 @@
 #include "state.h"
+#include "context.h"
+#include "concreteStateB.h"
 class ConcreteStateA : public state
 {
     public:
         virtual ~ConcreteStateA();
         static State * Instance();
 
-        virtual void handle(Context *c);
+        void handle(Context *);
         
     private:
         ConcreteStateA();

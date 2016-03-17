@@ -1,4 +1,4 @@
-
+#include "state.h"
 class Context
 {
     public:
@@ -6,4 +6,6 @@ class Context
         virtual ~Context();
         void changeState(State *);
         void request();
+    private:
+        State * m_pState;
 };
