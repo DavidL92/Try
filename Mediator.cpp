@@ -70,10 +70,10 @@ class Mediator
         ~Mediator()
         {
         }
-        void AddStudent(Colleague * colleague)
+        virtual void AddStudent(Colleague * colleague)
         {
         }
-        void chart()
+        virtual void chart()
         {
         }
 
@@ -105,7 +105,7 @@ class TestMediator : public Mediator
             vector<Colleague *>::iterator itr = m_vColleague.begin();
             for(;itr != m_vColleague.end();itr++)
             {
-                *itr->talk();
+                (*itr)->talk();
             }
         }
     private:
@@ -115,17 +115,17 @@ class TestMediator : public Mediator
 
 int main()
 {
-    Colleague *Monitor = new Monitor("Jerry");
-    Colleague *StudentA = new StudentA("Tom");
-    Colleague *StudentB = new StudentB("Jack");
+    Colleague *moniter = new Moniter("Jerry");
+    Colleague *studentA = new StudentA("Tom");
+    Colleague *studentB = new StudentB("Jack");
 
-    Mediator * testmediator = new TestMeditor(); 
-    testmediator->AddStudent(Monitor);
-    testmediator->AddStudent(StudentA);
-    testmediator->AddStudent(StudentB);
-    Monitor->set_content("hello everyone,we have a meeting");
-    StudentA->set_content("mamamiya");
-    StudentB->set_content("come on");
+    Mediator * testmediator = new TestMediator(); 
+    testmediator->AddStudent(moniter);
+    testmediator->AddStudent(studentA);
+    testmediator->AddStudent(studentB);
+    moniter->set_content("hello everyone,we have a meeting");
+    studentA->set_content("mamamiya");
+    studentB->set_content("come on");
     testmediator->chart();
     return 0;
 }
