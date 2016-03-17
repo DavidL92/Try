@@ -1,5 +1,8 @@
-#include <subject.h>
+#include "subject.h"
+#include <iostream>
 #include <vector>
+
+using namespace std;
 Subject::Subject()
 {
 }

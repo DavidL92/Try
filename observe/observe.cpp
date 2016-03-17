@@ -65,11 +65,14 @@ int main()
 {
     Observer *observea = new ConcreteObserverA();
     Observer *observeb = new ConcreteObserverB();
-    ConcreteSubjectA *SubjectA = new ConcreteSubjectA();
-    ConcreteSubjectB *SubjectB = new ConcreteSubjectB();
+    Subject *SubjectA = new ConcreteSubjectA();
+    Subject *SubjectB = new ConcreteSubjectB();
 
     SubjectA->Attach(observea);
     SubjectA->Attach(observeb);
     SubjectA->set_state("abc");
     SubjectA->Notify();
+    SubjectA->Detach(observeb);
+    SubjectA->Notify();
+
 }

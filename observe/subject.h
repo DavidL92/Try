@@ -1,4 +1,5 @@
 #include <string>
+#include <vector>
 #include "observe.h"
 
 using namespace std;
